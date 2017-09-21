@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pulpasoni</title>
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+<div class="nav-side-menu">
+    <div class="brand">GUSRESORT</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+        <div class="menu-list">
+
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a href="#">
+                    <i class="fa fa-dashboard fa-lg"></i> Hotel Villa Luz 
+                  </a>
+                </li>
+
+                <li  data-toggle="collapse" data-target="#shopping" class="collapsed active text-center">  
+                  <i class="material-icons text-center icon-30">shopping_cart</i>
+                  <div><a href="#"> Ventas</a>  </div>
+                </li>
+                <ul class="sub-menu collapse" id="shopping">
+                    <li class="active"><a href="#">Planes</a></li>
+                    <li><a href="#">Estadia</a></li>
+                </ul>
+
+                <li>
+                  <a href="#">
+                    <i class="material-icons text-center icon-30">face</i>
+                    <div><a href="#"> Clientes</a></div> 
+                  </a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#promotions" class="collapsed">
+                  <i class="material-icons text-center icon-30">view_carousel</i>
+                  <div><a href="#"> Promociones</a></div> 
+                </li>  
+                <ul class="sub-menu collapse" id="promotions">
+                  <li>General</li>
+                  <li>Temporada</li>
+                  <li>Especial</li>
+                </ul>
+
+                <li>  
+                  <i class="material-icons text-center icon-30">settings</i>
+                  <div><a href="#"> Configuración</a>  </div>
+                </li>
+            </ul>
+     </div>
+</div>
+
+<div class="content_board">
+  <div class="row nav-profile">
+    <div class="col-md-12"> 
+      <div class="profile">
+        <i class="material-icons text-center">person_pin</i>
+         <span class="user">José Pedraza</span>
+         <i class="material-icons text-center">exit_to_app</i>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- dashboard -->
+  <div class="container-fluid dashboard">
+      <p class="">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+         proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+      </p>
+      
+      <div class="col-md-6" id="sales_by_week" style="height:350px;"></div>
+      <div class="col-md-6" id="sales_by_plan" style="height:350px;"></div>
+      <hr>
+      <div class="col-md-6" id="container-speed" style="height:350px;"></div>
+      <div class="col-md-6" id="sales_anual" style="height: 350px;"></div>
+      
+  </div>
+</div> 
+  
+  
+  
+
+</body>
+<script src="assets/js/jquery-1.11.0.min.js" ></script>
+<script src="assets/js/bootstrap.min.js" ></script>
+<script src="assets/js/owl.carousel.js" ></script>
+<script src="assets/js/highcharts.js" ></script>
+<script src="assets/js/highcharts-more.js" ></script>
+<script src="assets/js/solid-gauge.js"></script>
+<script type="text/javascript">
+    
+  Highcharts.chart('sales_by_week', {
+      chart: {
+          type: 'areaspline'
+      },
+      title: {
+          text: 'Estadistica de ventas semanal'
+      },
+      legend: {
+          layout: 'vertical',
+          align: 'left',
+          verticalAlign: 'top',
+          x: 150,
+          y: 100,
+          floating: true,
+          borderWidth: 1,
+          backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+      },
+      xAxis: {
+          categories: [
+              'Lunes',
+              'Martes',
+              'Miercoles',
+              'Jueves',
+              'Viernes',
+              'Sabado',
+              'Domingo'
+          ],
+          plotBands: [{ // visualize the weekend
+              from: 4.5,
+              to: 6.5,
+              color: 'rgba(68, 170, 213, .2)'
+          }]
+      },
+      yAxis: {
+          title: {
+              text: 'Cantidad monetaria (millon)'
+          }
+      },
+      tooltip: {
+          shared: true,
+          valueSuffix: ' millones'
+      },
+      credits: {
+          enabled: false
+      },
+      plotOptions: {
+          areaspline: {
+              fillOpacity: 0.5
+          }
+      },
+      series: [{
+          name: 'Administrador Manuel',
+          data: [1, 2, 3, 5, 4, 6, 5]
+      }]
+  });
+
+
+  // Create the chart
+  Highcharts.chart('sales_by_plan', {
+      chart: {
+          type: 'pie'
+      },
+      title: {
+          text: 'Planes mas vendidos'
+      },
+      plotOptions: {
+          series: {
+              dataLabels: {
+                  enabled: true,
+                  format: '{point.name}: {point.y:.1f}%'
+              }
+          }
+      },
+
+      tooltip: {
+          headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+          pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> del 100%<br/>'
+      },
+      series: [{
+          name: 'Ventas',
+          colorByPoint: true,
+          data: [{
+              name: 'Plan Cupido',
+              y: 40.33,
+              drilldown: ' Plan Cupido'
+          }, {
+              name: 'Plan Familiar',
+              y: 25.77,
+              drilldown: 'Plan Familiar'
+          }, {
+              name: 'Plan Vacaciones',
+              y: 10.00,
+              drilldown: 'Plan Vacaciones'
+          }, {
+              name: 'Plan Navidad',
+              y: 20.00,
+              drilldown: 'Plan Navidad'
+          }]
+      }]
+  });
+
+
+  var gaugeOptions = {
+
+      chart: {
+          type: 'solidgauge'
+      },
+
+      title: null,
+
+      pane: {
+          center: ['50%', '85%'],
+          size: '110%',
+          startAngle: -90,
+          endAngle: 90,
+          background: {
+              backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+              innerRadius: '60%',
+              outerRadius: '100%',
+              shape: 'arc'
+          }
+      },
+
+      tooltip: {
+          enabled: false
+      },
+
+      // the value axis
+      yAxis: {
+          stops: [
+              [0.1, '#55BF3B'], // green
+              [0.5, '#DDDF0D'], // yellow
+              [0.9, '#DF5353'] // red
+          ],
+          lineWidth: 0,
+          minorTickInterval: null,
+          tickAmount: 2,
+          title: {
+              y: -120
+          },
+          labels: {
+              y: 16
+          }
+      },
+
+      plotOptions: {
+          solidgauge: {
+              dataLabels: {
+                  y: 5,
+                  borderWidth: 0,
+                  useHTML: true
+              }
+          }
+      }
+  };
+
+  // The speed gauge
+  var chartSpeed = Highcharts.chart('container-speed', Highcharts.merge(gaugeOptions, {
+      yAxis: {
+          min: 0,
+          max: 200,
+          title: {
+              text: 'Meta de venta mensual'
+          }
+      },
+
+      credits: {
+          enabled: false
+      },
+
+      series: [{
+          name: 'Speed',
+          data: [70],
+          dataLabels: {
+              format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                  ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">${y}</span><br/>' +
+                     '<span style="font-size:12px;color:silver">ventas/mes</span></div>'
+          },
+          tooltip: {
+              valueSuffix: 'ventas/mes'
+          }
+      }]
+
+  }));
+
+
+  Highcharts.chart('sales_anual', {
+      chart: {
+          type: 'column',
+          options3d: {
+              enabled: true,
+              alpha: 10,
+              beta: 25,
+              depth: 70
+          }
+      },
+      title: {
+          text: 'Ventas anuales'
+      },
+      plotOptions: {
+          column: {
+              depth: 25
+          }
+      },
+      xAxis: {
+          categories: Highcharts.getOptions().lang.shortMonths
+      },
+      yAxis: {
+          title: {
+              text: null
+          }
+      },
+      series: [{
+          name: 'Sales',
+          data: [200000, 350000, 800000, 400000, 430000, 50000, 110000, 490000, 600000, 750000, 100000, 280000]
+      }]
+  });
+
+</script>
+</html>

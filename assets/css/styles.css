@@ -1,0 +1,91 @@
+@font-face {
+   font-family: 'HelveticaNeueLTCom-Lt';/* embed */
+   src: url('../fonts/HelveticaNeueLTCom-Lt.eot');
+   src: url('../fonts/HelveticaNeueLTCom-Lt.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/HelveticaNeueLTCom-Lt.woff') format('woff'),
+       url('../fonts/HelveticaNeueLTCom-Lt.ttf') format('truetype'),
+       url('../fonts/HelveticaNeueLTCom-Lt.svg#HelveticaNeueLTCom-Lt') format('svg');
+}
+
+html{width: 100%; min-height: 100%;}
+
+body{margin:0; padding: 0; overflow-x: hidden; font-family:'HelveticaNeueLTCom-Lt'; min-height: 100%;}
+
+
+.not_padding{padding-left: 0;padding-right: 0;}
+
+/*******Menú*******/
+.menu{ border-bottom: none; font-size: 18px; color: #4caf50 !important;min-height: 124px; }
+.menu .item_menu {height: 124px; vertical-align: middle;align-items: center;display: flex !important;color: #4caf50;}
+.menu .item_menu:hover {background-color: #fec010 !important; color: #fff;}
+.menu .subsecciones a {color: #4caf50;}
+/*******Fin Menú*******/
+
+
+/*******Nuestros Productos y Sabores******/
+.nuestros_productos .banner img{width: 80%; margin-top: 20px;}
+.nuestros_productos .promo_principal{margin-top: 10px;}
+.nuestros_sabores .banner img{width: 45%; margin-top: 20px;}
+.sabores {width: 100%;}
+.sabor_1 {width: 20%; float: left; background-color: #d83226;}
+.sabor_2 {width: 20%; float: left; background-color: #be1a8d;}
+.sabor_3 {width: 20%; float: left; background-color: #1aaf4c;}
+.sabor_4 {width: 20%; float: left; background-color: #ed1f29;}
+.sabor_5 {width: 20%; float: left; background-color: #fecd09;}
+.sabor_1 .title_sabor1{background-color: #d83226; color: #fff; text-align: left;}
+.sabor_2 .title_sabor2{background-color: #be1a8d; color: #fff; text-align: left;}
+.sabor_3 .title_sabor3{background-color: #1aaf4c; color: #fff; text-align: left;}
+.sabor_4 .title_sabor4{background-color: #ed1f29; color: #fff; text-align: left;}
+.sabor_5 .title_sabor5{background-color: #fecd09; color: #fff; text-align: left;}
+/*******Fin Nuestros Productos y Sabores******/
+
+
+/*******Seccion Sabores******/
+.img_sabores{width: 100%; margin-top: 20px; outline: solid 1px;}
+.seccion_sabores .title_sabores{font-size: 30px; margin-top: 10px; background-color: #efaa1e; color: #fff; font-weight: bold}
+.seccion_sabores .sabores {width: 100%;}
+.seccion_sabores .sabores .sabor_1{width: 20%; background-color: #d83226; margin-bottom:20px;}
+.seccion_sabores .sabores .sabor_2{width: 20%; background-color: #be1a8d; margin-bottom:20px;}
+.seccion_sabores .sabores .sabor_3{width: 20%; background-color: #1aaf4c; margin-bottom:20px;}
+.seccion_sabores .sabores .sabor_4{width: 20%; background-color: #ed1f29; margin-bottom:20px;}
+.seccion_sabores .sabores .sabor_5{width: 20%; background-color: #fecd09; margin-bottom:20px;}
+.seccion_sabores .sabores .title_sabor1{background-color: #d83226; color: #fff;}
+.seccion_sabores .sabores .title_sabor2{background-color: #be1a8d; color: #fff;}
+.seccion_sabores .sabores .title_sabor3{background-color: #1aaf4c; color: #fff;}
+.seccion_sabores .sabores .title_sabor4{background-color: #ed1f29; color: #fff;}
+.seccion_sabores .sabores .title_sabor5{background-color: #fecd09; color: #fff;}
+/*******Fin Seccion Sabores******/
+
+
+/*******Seccion Presentaciones******/
+.title_presentaciones h1{color: #05a358; font-weight: bold; margin-left: 30px;}
+.title_presentaciones hr{clear: both;margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 3px solid #05a358;}
+.content_presentaciones{margin-top: 20px; outline: solid 1px gray;}
+/*******Fin Seccion Presentaciones******/
+
+
+/*******Seccion Nosotros******/
+.title_nosotros h1{color: #a02196; font-weight: bold; margin-left: 30px;}
+.title_nosotros hr{clear: both;margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 3px solid #a02196;}
+.content_nosotros{margin-top: 20px; outline: solid 1px gray;}
+/*******Fin Seccion Nosotros******/
+
+
+/*******Seccion Productos******/
+.title_productos h1{color: #e22021; font-weight: bold; margin-left: 30px;}
+.title_productos hr{clear: both;margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 3px solid #e22021;}
+.content_productos{margin-top: 20px; outline: solid 1px gray;}
+/*******Fin Seccion Productos******/
+
+
+/*******Seccion Clientes******/
+.title_clientes h1{color: #e22021; font-weight: bold; margin-left: 30px;}
+.title_clientes hr{clear: both;margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 3px solid #e22021;}
+.content_clientes{margin-top: 20px; outline: solid 1px gray;}
+/*******Fin Seccion Clientes******/
+
+
+/*********Footer*********/
+
+
+/*********Fin Footer*********/
