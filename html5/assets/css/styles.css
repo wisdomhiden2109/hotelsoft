@@ -10,6 +10,7 @@
 /*General Styles*/
 .not_padding{padding-left: 0;padding-right: 0;}
 .icon-30{font-size: 30px !important;	}
+.icon-48{font-size: 48px !important;}
 
 body {margin: 0px;padding: 0px;}
 
@@ -43,6 +44,7 @@ body {margin: 0px;padding: 0px;}
 .nav-side-menu li a {text-decoration: none;color: #e1ffff;}
 .nav-side-menu li:hover {background-color: #37474f;-webkit-transition: all 1s ease;-moz-transition: all 1s ease;-o-transition: all 1s ease;-ms-transition: all 1s ease;transition: all 1s ease;}
 
+
 .content_board .row{margin-left: 0; margin-right: 0;}
 .nav-profile{ text-align: right; font-family: HelveticaNeueLTCom-Lt; font-size: 12px; background-color: #37474f; border-bottom:solid 1px #37474f; color: #fff; padding: 5px; height: 34px; box-sizing: border-box;}
 .nav-profile .profile{position: absolute; display: flex; align-items: center; right: 70px;}
@@ -52,6 +54,20 @@ body {margin: 0px;padding: 0px;}
 .highcharts-credits{display: none;}
 
 
+/***** rooms ***********/
+.rooms .room{width: 100px; height: 100px; margin: 3px; color: #fff; cursor: pointer;}
+.rooms .type_room1{background-color:#039be5;}
+.rooms .type_room2{background-color:#ff6d00;}
+.rooms .type_room3{background-color:#00e676;}
+.rooms .room .num{text-align: center; font-size: 42px;}
+.rooms .room .title_rom{font-size: 13px; font-family: HelveticaNeueLTCom-Lt; border-bottom: solid 1px;}
+.rooms .room .full{width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); display: grid; align-items: center; position: absolute;bottom: 0px;color: #fff;left: 0;text-align: center;font-size: 11px;padding: 2px;box-sizing: border-box;}
+.form_room label{color: #263238; font-family: HelveticaNeueLTCom-Lt; font-weight: bold;}
+.form_room .total{font-size: 50px;}
+/***** Fin rooms *************/
+
+
+/************* MEDIA QUERIES *******************/
 
 @media (max-width: 767px) {
   .nav-side-menu {
