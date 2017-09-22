@@ -15,7 +15,7 @@
 body {margin: 0px;padding: 0px;}
 
 
-.nav-side-menu {overflow: auto;font-family: HelveticaNeueLTCom-Lt;font-size: 13px;font-weight: 50;background-color: #263238;position: fixed;top: 0px;width: 150px;	height: 100%;color: #e1ffff; z-index: -1;}
+.nav-side-menu {overflow: auto;font-family: HelveticaNeueLTCom-Lt;font-size: 13px;font-weight: 50;background-color: #263238;position: fixed;top: 0px;width: 150px;	height: 100%;color: #e1ffff; z-index: 2;}
 .nav-side-menu .brand {
   background-color: #23282e;
   line-height: 50px;
@@ -44,9 +44,9 @@ body {margin: 0px;padding: 0px;}
 .nav-side-menu li a {text-decoration: none;color: #e1ffff;}
 .nav-side-menu li:hover {background-color: #37474f;-webkit-transition: all 1s ease;-moz-transition: all 1s ease;-o-transition: all 1s ease;-ms-transition: all 1s ease;transition: all 1s ease;}
 
-
-.content_board .row{margin-left: 0; margin-right: 0;}
-.nav-profile{ text-align: right; font-family: HelveticaNeueLTCom-Lt; font-size: 12px; background-color: #37474f; border-bottom:solid 1px #37474f; color: #fff; padding: 5px; height: 34px; box-sizing: border-box;}
+.content_board{padding-top: 34px;}
+.content_board .row{ margin-left: 0; margin-right: 0;}
+.nav-profile{ width: 100%; position: absolute; z-index:3; text-align: right; font-family: HelveticaNeueLTCom-Lt; font-size: 12px; background-color: #37474f; border-bottom:solid 1px #37474f; color: #fff; padding: 5px; height: 34px; box-sizing: border-box;}
 .nav-profile .profile{position: absolute; display: flex; align-items: center; right: 70px;}
 .nav-profile .profile .user{margin-right: 20px;}
 
