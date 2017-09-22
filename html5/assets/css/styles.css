@@ -15,7 +15,7 @@
 body {margin: 0px;padding: 0px;}
 
 
-.nav-side-menu {overflow: auto;font-family: HelveticaNeueLTCom-Lt;font-size: 13px;font-weight: 50;background-color: #263238;position: fixed;top: 0px;width: 150px;	height: 100%;color: #e1ffff;}
+.nav-side-menu {overflow: auto;font-family: HelveticaNeueLTCom-Lt;font-size: 13px;font-weight: 50;background-color: #263238;position: fixed;top: 0px;width: 150px;	height: 100%;color: #e1ffff; z-index: -1;}
 .nav-side-menu .brand {
   background-color: #23282e;
   line-height: 50px;
