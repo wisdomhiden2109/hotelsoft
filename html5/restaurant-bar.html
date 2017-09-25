@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pulpasoni</title>
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <!-- Navbar -->
+<div class="nav-side-menu">
+    <div class="brand">GUSRESORT</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+        <div class="menu-list">
+          <ul id="menu-content" class="menu-content collapse out">
+              <li onclick="location.href='home.html'">
+                  <i class="fa fa-dashboard fa-lg"></i> Hotel Villa Luz 
+              </li>
+              
+              <li onclick="location.href='rooms.html'">  
+                <i class="material-icons text-center icon-30">hotel</i>
+                <div> Habitaciones </div>
+              </li>
+
+              <li  onclick="location.href='restaurant-bar.html'">  
+                <i class="material-icons text-center icon-30">shopping_cart</i>
+                <div>Restaurante/Bar </div>
+              </li>
+
+              <li onclick="location.href='clients.html'">
+                  <i class="material-icons text-center icon-30">supervisor_account</i>
+                  <div>Clientes</div> 
+              </li>
+
+              <li data-toggle="collapse" data-target="#promotions" class="collapsed">
+                <i class="material-icons text-center icon-30">contact_mail</i>
+                <div><a href="fidelization.html">Fidelización</a></div> 
+              </li>  
+              <ul class="sub-menu collapse" id="promotions">
+                <li>General</li>
+                <li>Temporada</li>
+                <li>Especial</li>
+              </ul>
+
+              <li onclick="location.href='planes.html'">
+                  <i class="material-icons text-center icon-30">event</i>
+                  <div>Planes</div> 
+              </li>
+
+              <li onclick="location.href='aditional_services.html'">  
+                <i class="material-icons text-center icon-30">add_to_photos</i>
+                <div>Servicios Adicionales</div>
+              </li>
+
+              <li onclick="location.href='configuration.html'">  
+                <i class="material-icons text-center icon-30">settings</i>
+                <div>Configuración</div>
+              </li>
+          </ul>
+     </div>
+</div>
+
+<div class="nav-profile">
+ <div class="col-md-12"> 
+    <div class="profile">
+      <i class="material-icons text-center">person_pin</i>
+       <span class="user">José Pedraza</span>
+       <i class="material-icons text-center">exit_to_app</i>
+    </div>
+  </div>
+</div>
+
+
+  <!-- dashboard -->
+<div class="container-fluid dashboard">
+  <h3>Restaurante - Bar</h3>
+  <hr>
+  
+  <div class="col-md-6">
+
+    <div>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#searching" aria-controls="searching" role="tab" data-toggle="tab">Buscador</a></li>
+        <li role="presentation"><a href="#navigator" aria-controls="navigator" role="tab" data-toggle="tab">Navegador</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="searching">
+            <div class="form-group">
+                <br>
+                <input type="text" class="form-control" id="search_restaurant_bar" placeholder="Nombre del producto">
+            </div>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="navigator">
+          <br>Todos
+        </div>
+      </div>
+
+    </div>
+
+      
+  </div>
+
+  <div class="col-md-6">
+    <div class="col-md-12 text-center">
+        <div class="title_list">Listado de productos</div>
+        <div class="mask_table">No hay elementos aun.</div>
+        <div class="table-responsive responsive-table-products">
+          <table class="table table-striped table-products">
+              
+          </table>
+        </div>
+    </div>
+    <div class="col-md-12 products_values">
+      <div class="col-md-4 text-center value">No. productos: <label class="qty_products">0</label></div>
+      <div class="col-md-4 text-center value">Iva: <label class="iva">$0.00</label></div>
+      <div class="col-md-4 text-center value">Subtotal: <label class="subtotal">$0.00</label></div>
+    </div>
+
+    <div class="col-md-12 facture">
+        <div class="facture_total">Total: <span class="value_factured">$0</span></div>
+    </div>  
+
+    <div class="col-md-6">
+      <div class="payment">
+        <i class="material-icons icon-30">local_atm</i>
+        Pagar en efectivo
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="payment">
+        <i class="material-icons icon-30">room_service</i>
+        Cargar a la habitación
+      </div>
+    </div>
+
+  </div>
+
+  
+  
+</div> 
+
+
+  
+  
+
+
+</body>
+<link rel="stylesheet" type="text/css" href="assets/css/easy-autocomplete.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/easy-autocomplete.themes.min.css">
+<script src="assets/js/jquery-1.11.0.min.js" ></script>
+<script src="assets/js/bootstrap.min.js" ></script>
+<script src="assets/js/owl.carousel.js" ></script>
+<script src="assets/js/jquery.easy-autocomplete.min.js" ></script>
+<script type="text/javascript">
+  var cont_products = 0, iva = 0,total = 0,subtotal = 0,subtotal_total = 0, iva_total=0;
+  
+  var options = {
+    data: [ {
+             id: 1,
+             name: "Cocacola",
+             type: "bebida",
+             price: "2200",
+             description: "gaseosa de 350 ml",
+             icon: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flasche_Coca-Cola_0%2C2_Liter.jpg"
+           },
+           {
+             id: 2,
+             name: "Quatro",
+             type: "bebida",
+             price: "2000",
+             description: "gaseosa de 350 ml",
+             icon: "http://www.carulla.com/images/products/962/0001784442408962/0001784443427553_xl_a.jpg"
+           }],
+
+    getValue: "name",
+
+    template: {
+        type: "custom",
+        method: function(value, item) {
+          var product = '<div class="row row_product_buy">' +
+            '<div class="col-xs-3 col-sm-2">' +
+               '<img src="'+item.icon+'">' +
+            '</div>' +
+            '<div class="col-xs-7 col-sm-8 product-buy">' +
+                '<span>'+item.name+'</span> <br>' +
+                '<span>'+item.description+'</span> <br>' +
+                '<span class="price_buy">$'+item.price+'</span>' +
+            '</div>' +
+            '<div class="col-xs-2"><i class="material-icons icon-30 icon-buy">add_shopping_cart</i></div>'
+          '</div>';
+
+          return product;
+          //return "<img class='eac-icon' src='" + item.icon + "' />" + item.name + " | $" + item.price + " | "+ item.description;
+        }
+      },
+
+    list: {
+      match: {
+        enabled: true
+      },
+      sort: {
+        enabled: true
+      },
+      maxNumberOfElements: 10,
+      onClickEvent: function() {
+        
+        var id = $("#search_restaurant_bar").getSelectedItemData().id;
+        var value = $("#search_restaurant_bar").getSelectedItemData().name;
+        var type = $("#search_restaurant_bar").getSelectedItemData().type;
+        var price = $("#search_restaurant_bar").getSelectedItemData().price;
+        var description = $("#search_restaurant_bar").getSelectedItemData().description;
+        var icons_add = '<div class="content-icon add-item" onclick="add_qty_product('+id+','+price+')"><i class="material-icons icon-15">add</i></div>';
+        var icons_remove = '<div class="content-icon remove-item" onclick="remove_qty_product('+id+','+price+')"><i class="material-icons icon-15">remove</i></div>';
+        var product = '<tr data-id="'+id+'">';
+            product += '<td>'+value+'</td>';
+            product += '<td> <span class="price"> $'+price+'</span></td>';
+            product += '<td>'+description+'</td>';
+            product += '<td>'+icons_remove+'<input class="input-qty input'+id+'" type="text" value="1" data-input-id="'+id+'" readonly>'+icons_add+'</td>';
+            product += '<td><i class="material-icons icon-27 teal pointer" onclick="remove_product('+id+','+price+')">delete</i></td>';
+            product += '</tr>';
+
+        var exist = false;
+            
+        $(".table-products tr").each(function(index,element){
+          if($(this)[0].dataset.id == id){
+            exist = true;
+          }
+        })
+
+
+        if(!exist){
+          cont_products++;
+          $(".table-products").append(product);
+          /*Subtotal - Iva*/ 
+          iva = parseFloat(price * 16 / 100);
+          subtotal = parseFloat((price - iva));
+
+          subtotal_total = (subtotal_total + subtotal);
+          iva_total = (iva_total + iva);
+          
+          $(".qty_products").html(cont_products);
+          $(".iva").html(iva_total);
+          $(".subtotal").html(subtotal_total);
+          update_total();
+        }else{
+          add_qty_product(id,price);
+        }
+      }
+    }
+  };
+  $("#search_restaurant_bar").easyAutocomplete(options);
+
+
+  function add_qty_product(id_input,price){
+    var value_product = $(".input"+id_input).val();
+    value_product++;
+
+    if(value_product >= 1){
+      cont_products++;
+      $(".input"+id_input).val(value_product);
+      /*Subtotal - Iva*/ 
+      iva = parseFloat(price * 16 / 100);
+      subtotal = parseFloat((price - iva));
+
+      subtotal_total = (subtotal_total + subtotal);
+      iva_total = (iva_total + iva);
+      
+      $(".qty_products").html(cont_products);
+      $(".iva").html(iva_total);
+      $(".subtotal").html(subtotal_total); 
+
+      update_total(); 
+    }
+  }
+
+  function remove_qty_product(id_input,price){
+    var value_product = $(".input"+id_input).val();
+    value_product--;
+    
+    if(value_product >= 1){
+      cont_products--;
+      $(".input"+id_input).val(value_product);  
+      /*Subtotal - Iva*/ 
+      iva = parseFloat(price * 16 / 100);
+      subtotal = parseFloat((price - iva));
+
+      subtotal_total = (subtotal_total - subtotal);
+      iva_total = (iva_total - iva);
+      
+      $(".qty_products").html(cont_products);
+      $(".iva").html(iva_total);
+      $(".subtotal").html(subtotal_total);  
+
+      update_total();
+    }
+    
+  }
+
+  function remove_product(id,price){
+    $(".table-products tr").each(function(index,element){
+      if($(this)[0].dataset.id == id){
+
+        var qty_product = $(this).find(".input-qty").val();
+        cont_products = cont_products - qty_product;
+        price = price * qty_product;
+
+        /*Subtotal - Iva*/ 
+        iva = parseFloat(price * 16 / 100);
+        subtotal = parseFloat((price - iva));
+
+        subtotal_total = (subtotal_total - subtotal);
+        iva_total = (iva_total - iva);
+        
+        $(".qty_products").html(cont_products);
+        $(".iva").html(iva_total);
+        $(".subtotal").html(subtotal_total); 
+        this.remove();
+        update_total();
+      }
+    })
+
+    
+  }
+
+  function update_total(){
+    total = subtotal_total + iva_total;
+    $(".value_factured").html("$"+total);
+    if(total > 0){
+      $(".mask_table").css({"display":"none"});
+    }else{
+      $(".mask_table").css({"display":"block"});
+    }
+  }
+
+</script>
+
+</html>

@@ -10,19 +10,21 @@
 /*General Styles*/
 .not_padding{padding-left: 0;padding-right: 0;}
 .icon-30{font-size: 30px !important;	}
+.icon-27{font-size: 27px;}
 .icon-48{font-size: 48px !important;}
+.icon-15{font-size: 15px !important;}
+.bg-teal{background-color:#00897b; color: #fff;}
+.teal{color: #00897b;}
+.pointer{cursor: pointer;}
 
-body {margin: 0px;padding: 0px;}
+body {margin: 0px;padding: 0px; font-family: HelveticaNeueLTCom-Lt;}
+
+/*Transitios*/
+.payment{transition: all 0.6s;}
 
 
 .nav-side-menu {overflow: auto;font-family: HelveticaNeueLTCom-Lt;font-size: 13px;font-weight: 50;background-color: #263238;position: fixed;top: 0px;width: 150px;	height: 100%;color: #e1ffff; z-index: 2;}
-.nav-side-menu .brand {
-  background-color: #23282e;
-  line-height: 50px;
-  display: block;
-  text-align: center;
-  font-size: 14px;
-}
+.nav-side-menu .brand {margin-top: 30px; background-color: #23282e;line-height: 50px;display: block;text-align: center;font-size: 14px;}
 .nav-side-menu .toggle-btn {
   display: none;
 }
@@ -44,12 +46,12 @@ body {margin: 0px;padding: 0px;}
 .nav-side-menu li a {text-decoration: none;color: #e1ffff;}
 .nav-side-menu li:hover {background-color: #37474f;-webkit-transition: all 1s ease;-moz-transition: all 1s ease;-o-transition: all 1s ease;-ms-transition: all 1s ease;transition: all 1s ease;}
 
-.content_board{padding-top: 34px;}
-.content_board .row{ margin-left: 0; margin-right: 0;}
+
 .nav-profile{ width: 100%; position: absolute; z-index:3; text-align: right; font-family: HelveticaNeueLTCom-Lt; font-size: 12px; background-color: #37474f; border-bottom:solid 1px #37474f; color: #fff; padding: 5px; height: 34px; box-sizing: border-box;}
 .nav-profile .profile{position: absolute; display: flex; align-items: center; right: 70px;}
 .nav-profile .profile .user{margin-right: 20px;}
-
+.dashboard{padding-top: 34px;}
+.dashboard .row{ margin-left: 0; margin-right: 0;}
 
 .highcharts-credits{display: none;}
 
@@ -67,6 +69,30 @@ body {margin: 0px;padding: 0px;}
 /***** Fin rooms *************/
 
 
+/********* restaurant - bar ******/
+
+.product-buy{display: grid;align-items: center; margin-top: 13px;}
+.row_product_buy img{max-width: 60px;}
+.price_buy{color: teal;}
+.row_product_buy{border-bottom: solid 1px lightgray;padding-bottom: 10px;}
+.icon-buy{margin-top: 31px;color: teal;}
+
+.eac-icon{max-height: 70px !important; cursor: pointer; margin-right: 10px;}
+.easy-autocomplete{width: auto !important;}
+.title_list{padding:10px; margin-top: 17px; margin-bottom: 0px;background-color: teal;color: #fff;font-size: 16px;}
+.responsive-table-products{height: 188px; border: solid 1px #b2dfdb; padding-top: 10px;}
+.products_values .value{padding-top: 5px; box-sizing: border-box; outline: solid 1px #DBDBDB;}
+.input-qty{width: 25px; height: 25px; box-sizing: border-box; text-align: center; vertical-align: top;}
+.content-icon{width: 25px; height: 25px; cursor: pointer; padding-top: 5px; box-sizing: border-box; display: inline-block; margin-left: 3px; margin-right: 3px; background-color:#00897b; color: #fff; }
+
+
+
+.mask_table{width: 100%;position: absolute;top: 55%;text-align: center;font-size: 2rem;}    
+.facture .facture_total{font-size: 20px; text-align: center;margin-top: 20px;padding: 10px;box-sizing: border-box;background-color: teal;color: #fff;}
+.facture .facture_total .value_factured{font-size: 28px;}
+
+.payment{outline: solid 1px lightgray;padding: 10px;margin-top: 20px; text-align: center; display: grid; align-items: center; color: teal; font-size: 18px; cursor: pointer;}
+.payment:hover{background-color: teal; color: #fff; outline: none;}
 /************* MEDIA QUERIES *******************/
 
 @media (max-width: 767px) {
@@ -95,7 +121,7 @@ body {margin: 0px;padding: 0px;}
     line-height: 50px !important;
   }
 
-.content_board{width:100%; margin-left: 0px;}
+.dashboard{width:100%; margin-left: 0px;}
 
 }
 @media (min-width: 767px) {
@@ -103,6 +129,6 @@ body {margin: 0px;padding: 0px;}
     display: block;
   }
 
-  .content_board{width: calc(100% - 150px); margin-left: 150px;}
+  .dashboard{width: calc(100% - 150px); margin-left: 150px;}
 }
 

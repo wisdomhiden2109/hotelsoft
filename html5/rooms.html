@@ -19,64 +19,63 @@
     <div class="brand">GUSRESORT</div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
         <div class="menu-list">
+          <ul id="menu-content" class="menu-content collapse out">
+              <li onclick="location.href='home.html'">
+                  <i class="fa fa-dashboard fa-lg"></i> Hotel Villa Luz 
+              </li>
+              
+              <li onclick="location.href='rooms.html'">  
+                <i class="material-icons text-center icon-30">hotel</i>
+                <div> Habitaciones </div>
+              </li>
 
-            <ul id="menu-content" class="menu-content collapse out">
-                <li>
-                  <a href="#">
-                    <i class="fa fa-dashboard fa-lg"></i> Hotel Villa Luz 
-                  </a>
-                </li>
-                
-                <li  data-toggle="collapse" class="collapsed active text-center">  
-                  <i class="material-icons text-center icon-30">hotel</i>
-                  <div><a href="#"> Habitaciones</a>  </div>
-                </li>
+              <li  onclick="location.href='restaurant-bar.html'">  
+                <i class="material-icons text-center icon-30">shopping_cart</i>
+                <div>Restaurante/Bar </div>
+              </li>
 
-                <li  data-toggle="collapse" data-target="#shopping" class="collapsed active text-center">  
-                  <i class="material-icons text-center icon-30">shopping_cart</i>
-                  <div><a href="#"> Ventas</a>  </div>
-                </li>
-                <ul class="sub-menu collapse" id="shopping">
-                    <li class="active"><a href="#">Planes</a></li>
-                    <li><a href="#">Estadia</a></li>
-                </ul>
+              <li onclick="location.href='clients.html'">
+                  <i class="material-icons text-center icon-30">supervisor_account</i>
+                  <div>Clientes</div> 
+              </li>
 
-                <li>
-                  <a href="#">
-                    <i class="material-icons text-center icon-30">face</i>
-                    <div><a href="#"> Clientes</a></div> 
-                  </a>
-                </li>
+              <li data-toggle="collapse" data-target="#promotions" class="collapsed">
+                <i class="material-icons text-center icon-30">contact_mail</i>
+                <div><a href="fidelization.html">Fidelización</a></div> 
+              </li>  
+              <ul class="sub-menu collapse" id="promotions">
+                <li>General</li>
+                <li>Temporada</li>
+                <li>Especial</li>
+              </ul>
 
-                <li data-toggle="collapse" data-target="#promotions" class="collapsed">
-                  <i class="material-icons text-center icon-30">view_carousel</i>
-                  <div><a href="#"> Promociones</a></div> 
-                </li>  
-                <ul class="sub-menu collapse" id="promotions">
-                  <li>General</li>
-                  <li>Temporada</li>
-                  <li>Especial</li>
-                </ul>
+              <li onclick="location.href='planes.html'">
+                  <i class="material-icons text-center icon-30">event</i>
+                  <div>Planes</div> 
+              </li>
 
-                <li>  
-                  <i class="material-icons text-center icon-30">settings</i>
-                  <div><a href="#"> Configuración</a>  </div>
-                </li>
-            </ul>
+              <li onclick="location.href='aditional_services.html'">  
+                <i class="material-icons text-center icon-30">add_to_photos</i>
+                <div>Servicios Adicionales</div>
+              </li>
+
+              <li onclick="location.href='configuration.html'">  
+                <i class="material-icons text-center icon-30">settings</i>
+                <div>Configuración</div>
+              </li>
+          </ul>
      </div>
 </div>
 
-<div class="content_board">
-  <div class="row nav-profile">
-    <div class="col-md-12"> 
-      <div class="profile">
-        <i class="material-icons text-center">person_pin</i>
-         <span class="user">José Pedraza</span>
-         <i class="material-icons text-center">exit_to_app</i>
-      </div>
+<div class="nav-profile">
+ <div class="col-md-12"> 
+    <div class="profile">
+      <i class="material-icons text-center">person_pin</i>
+       <span class="user">José Pedraza</span>
+       <i class="material-icons text-center">exit_to_app</i>
     </div>
   </div>
-
+</div>
 
 
   <!-- dashboard -->
@@ -85,7 +84,7 @@
       <hr>
       <div class="rooms">
           <div class="row">
-          
+
             <div class="col-md-10 col-md-offset-1">
               <div class="col-xs-2 col-sm-3 col-md-1 room type_room1" data-state="empty" data-type_room="clasica" 
                   data-value_person="50000" data-value_junior="30000">
