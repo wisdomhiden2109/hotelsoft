@@ -1,111 +1,12 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Admin Hotel</title>
-  <meta charset="utf-8"> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-
-<body>
-
-<!-- Navbar -->
-<div class="nav-side-menu">
-    <div class="brand">GUSRESORT</div>
-    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-        <div class="menu-list">
-          <ul id="menu-content" class="menu-content collapse out">
-              <li onclick="location.href='home.html'">
-                  <i class="fa fa-dashboard fa-lg"></i> Hotel Villa Luz 
-              </li>
-
-              <li  onclick="location.href='restaurant-bar.html'">  
-                <i class="material-icons text-center icon-30">shopping_cart</i>
-                <div>Vender </div>
-              </li>
-
-              <li onclick="location.href='clients.html'">
-                  <i class="material-icons text-center icon-30">supervisor_account</i>
-                  <div>Clientes</div> 
-              </li>
-              
-              <li data-toggle="collapse" data-target="#inventory" class="collapsed">
-                <i class="material-icons text-center icon-30">chrome_reader_mode</i>
-                <div>Inventario</div> 
-              </li>  
-              <ul class="sub-menu collapse" id="inventory">
-                <li onclick="location.href='categories.html'">Categorias</li>
-                <li onclick="location.href='subcategories.html'">Subcategorias</li>
-                <li onclick="location.href='products.html'">Productos</li>
-              </ul>
-
-              <li data-toggle="collapse" data-target="#promotions" class="collapsed">
-                <i class="material-icons text-center icon-30">contact_mail</i>
-              </li>  
-              <ul class="sub-menu collapse" id="promotions">
-                <li>General</li>
-                <li>Temporada</li>
-                <li>Especial</li>
-              </ul>
-
-              <li onclick="location.href='planes.html'">
-                  <i class="material-icons text-center icon-30">event</i>
-                  <div>Planes</div> 
-              </li>
-
-              <li onclick="location.href='aditional_services.html'">  
-                <i class="material-icons text-center icon-30">add_to_photos</i>
-                <div>Servicios Adicionales</div>
-              </li>
-
-              <li onclick="location.href='configuration.html'">  
-                <i class="material-icons text-center icon-30">settings</i>
-                <div>Configuración</div>
-              </li>
-          </ul>
-     </div>
-</div>
-
-<div class="nav-profile">
- <div class="col-md-12"> 
-    <div class="profile">
-      <i class="material-icons text-center">person_pin</i>
-       <span class="user">José Pedraza</span>
-       <i class="material-icons text-center">exit_to_app</i>
-    </div>
-  </div>
-</div>
-
-
-  
-  <!-- dashboard -->
-  <div class="container-fluid dashboard">
-      <br>
-      <div class="col-md-6" id="sales_by_week" style="height:350px;"></div>
-      <div class="col-md-6" id="sales_by_plan" style="height:350px;"></div>
-      <hr>
-      <div class="col-md-6" id="container-speed" style="height:350px;"></div>
-      <div class="col-md-6" id="sales_anual" style="height: 350px;"></div>
-      
-  </div>
-  
-  
-  
-
 </body>
-<script src="assets/js/jquery-1.11.0.min.js" ></script>
-<script src="assets/js/bootstrap.min.js" ></script>
-<script src="assets/js/owl.carousel.js" ></script>
-<script src="assets/js/highcharts.js" ></script>
-<script src="assets/js/highcharts-more.js" ></script>
-<script src="assets/js/solid-gauge.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery-1.11.0.min.js" ></script>
+<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js" ></script>
+<script src="<?php echo base_url(); ?>assets/js/owl.carousel.js" ></script>
+<script src="<?php echo base_url(); ?>assets/js/highcharts.js" ></script>
+<script src="<?php echo base_url(); ?>assets/js/highcharts-more.js" ></script>
+<script src="<?php echo base_url(); ?>assets/js/solid-gauge.js"></script>
 <script type="text/javascript">
-    
   Highcharts.chart('sales_by_week', {
       chart: {
           type: 'areaspline'
@@ -325,4 +226,37 @@
   });
 
 </script>
+
+<?php     
+
+  switch ($section) {
+    
+    case 'productos': ?>
+      <script src="assets/js/dataTable.min.js"></script>
+      <script type="text/javascript">
+          $(document).ready(function() {
+              $('#table-products').DataTable();
+          } );
+      </script>
+    <?php  break;
+
+    case 'nuevo-producto': ?>
+        <script type="text/javascript">
+          
+          $("#form-product .file_product").each(function(index,element){
+              
+              $(element).find('.inputfile').change(function(){
+                console.log($(this));
+                var name = $(this)[0].files[0].name;
+
+                $(element).find('.labelfile').html(name);
+              })
+               
+          })
+        </script> 
+
+        
+      <?php break;
+  } ?>
+  
 </html>

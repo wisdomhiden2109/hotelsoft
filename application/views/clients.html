@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Hotel</title>
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/dataTable.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+<div class="nav-side-menu">
+    <div class="brand">GUSRESORT</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+        <div class="menu-list">
+          <ul id="menu-content" class="menu-content collapse out">
+              <li onclick="location.href='home.html'">
+                  <i class="fa fa-dashboard fa-lg"></i> Hotel Villa Luz 
+              </li>
+              
+              <li onclick="location.href='rooms.html'">  
+                <i class="material-icons text-center icon-30">hotel</i>
+                <div> Habitaciones </div>
+              </li>
+
+              <li  onclick="location.href='restaurant-bar.html'">  
+                <i class="material-icons text-center icon-30">shopping_cart</i>
+                <div>Restaurante/Bar </div>
+              </li>
+
+              <li onclick="location.href='clients.html'">
+                  <i class="material-icons text-center icon-30">supervisor_account</i>
+                  <div>Clientes</div> 
+              </li>
+
+              <li data-toggle="collapse" data-target="#promotions" class="collapsed">
+                <i class="material-icons text-center icon-30">contact_mail</i>
+                <div><a href="fidelization.html">Fidelización</a></div> 
+              </li>  
+              <ul class="sub-menu collapse" id="promotions">
+                <li>General</li>
+                <li>Temporada</li>
+                <li>Especial</li>
+              </ul>
+
+              <li onclick="location.href='planes.html'">
+                  <i class="material-icons text-center icon-30">event</i>
+                  <div>Planes</div> 
+              </li>
+
+              <li onclick="location.href='aditional_services.html'">  
+                <i class="material-icons text-center icon-30">add_to_photos</i>
+                <div>Servicios Adicionales</div>
+              </li>
+
+              <li onclick="location.href='configuration.html'">  
+                <i class="material-icons text-center icon-30">settings</i>
+                <div>Configuración</div>
+              </li>
+          </ul>
+     </div>
+</div>
+
+<div class="nav-profile">
+ <div class="col-md-12"> 
+    <div class="profile">
+      <i class="material-icons text-center">person_pin</i>
+       <span class="user">José Pedraza</span>
+       <i class="material-icons text-center">exit_to_app</i>
+    </div>
+  </div>
+</div>
+
+
+  
+<!-- dashboard -->
+<div class="container-fluid dashboard">
+ <h3>Clientes</h3>
+ <hr>
+
+ 	<div class="col-md-12 table-responsive table-clients">
+ 	  <table id="example" class="table display" cellspacing="0" width="100%">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
+              </tr>
+          </thead>
+          <tfoot>
+              <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
+              </tr>
+          </tfoot>
+	      <tbody>
+	          <tr>
+	              <td>Tiger Nixon</td>
+	              <td>System Architect</td>
+	              <td>Edinburgh</td>
+	              <td>61</td>
+	              <td>2011/04/25</td>
+	              <td>$320,800</td>
+	          </tr>
+	          <tr>
+	              <td>Garrett Winters</td>
+	              <td>Accountant</td>
+	              <td>Tokyo</td>
+	              <td>63</td>
+	              <td>2011/07/25</td>
+	              <td>$170,750</td>
+	          </tr>
+	          <tr>
+	              <td>Ashton Cox</td>
+	              <td>Junior Technical Author</td>
+	              <td>San Francisco</td>
+	              <td>66</td>
+	              <td>2009/01/12</td>
+	              <td>$86,000</td>
+	          </tr>
+	          <tr>
+	              <td>Cedric Kelly</td>
+	              <td>Senior Javascript Developer</td>
+	              <td>Edinburgh</td>
+	              <td>22</td>
+	              <td>2012/03/29</td>
+	              <td>$433,060</td>
+	          </tr>
+	          <tr>
+	              <td>Airi Satou</td>
+	              <td>Accountant</td>
+	              <td>Tokyo</td>
+	              <td>33</td>
+	              <td>2008/11/28</td>
+	              <td>$162,700</td>
+	          </tr>
+	          <tr>
+	              <td>Brielle Williamson</td>
+	              <td>Integration Specialist</td>
+	              <td>New York</td>
+	              <td>61</td>
+	              <td>2012/12/02</td>
+	              <td>$372,000</td>
+	          </tr>
+	          <tr>
+	              <td>Herrod Chandler</td>
+	              <td>Sales Assistant</td>
+	              <td>San Francisco</td>
+	              <td>59</td>
+	              <td>2012/08/06</td>
+	              <td>$137,500</td>
+	          </tr>
+	          <tr>
+	              <td>Rhona Davidson</td>
+	              <td>Integration Specialist</td>
+	              <td>Tokyo</td>
+	              <td>55</td>
+	              <td>2010/10/14</td>
+	              <td>$327,900</td>
+	          </tr>
+	          <tr>
+	              <td>Colleen Hurst</td>
+	              <td>Javascript Developer</td>
+	              <td>San Francisco</td>
+	              <td>39</td>
+	              <td>2009/09/15</td>
+	              <td>$205,500</td>
+	          </tr>
+ 	        </tbody>
+ 	    </table>
+ 	</div>
+</div>
+
+
+
+</body>
+
+<script src="assets/js/jquery-1.11.0.min.js" ></script>
+<script src="assets/js/bootstrap.min.js" ></script>
+<script src="assets/js/dataTable.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+  
+</script>
+</html>

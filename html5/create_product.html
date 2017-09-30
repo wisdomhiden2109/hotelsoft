@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Hotel</title>
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="nav-side-menu">
+    <div class="brand">GUSRESORT</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+        <div class="menu-list">
+          <ul id="menu-content" class="menu-content collapse out">
+              <li onclick="location.href='home.html'">
+                  <i class="fa fa-dashboard fa-lg"></i> Hotel Villa Luz 
+              </li>
+
+              <li  onclick="location.href='restaurant-bar.html'">  
+                <i class="material-icons text-center icon-30">shopping_cart</i>
+                <div>Vender </div>
+              </li>
+
+              <li onclick="location.href='clients.html'">
+                  <i class="material-icons text-center icon-30">supervisor_account</i>
+                  <div>Clientes</div> 
+              </li>
+              
+              <li data-toggle="collapse" data-target="#inventory" class="collapsed">
+                <i class="material-icons text-center icon-30">chrome_reader_mode</i>
+                <div>Inventario</div> 
+              </li>  
+              <ul class="sub-menu collapse" id="inventory">
+                <li><a href="categories.html">Categorias</a></li>
+                <li><a href="subcategories.html"></a>Subcategorias</li>
+                <li><a href="products.html"></a>Productos</li>
+              </ul>
+
+              <li data-toggle="collapse" data-target="#promotions" class="collapsed">
+                <i class="material-icons text-center icon-30">contact_mail</i>
+              </li>  
+              <ul class="sub-menu collapse" id="promotions">
+                <li>General</li>
+                <li>Temporada</li>
+                <li>Especial</li>
+              </ul>
+
+              <li onclick="location.href='planes.html'">
+                  <i class="material-icons text-center icon-30">event</i>
+                  <div>Planes</div> 
+              </li>
+
+              <li onclick="location.href='aditional_services.html'">  
+                <i class="material-icons text-center icon-30">add_to_photos</i>
+                <div>Servicios Adicionales</div>
+              </li>
+
+              <li onclick="location.href='configuration.html'">  
+                <i class="material-icons text-center icon-30">settings</i>
+                <div>Configuración</div>
+              </li>
+          </ul>
+     </div>
+</div>
+
+<div class="nav-profile">
+ <div class="col-md-12"> 
+    <div class="profile">
+      <i class="material-icons text-center">person_pin</i>
+       <span class="user">José Pedraza</span>
+       <i class="material-icons text-center">exit_to_app</i>
+    </div>
+  </div>
+</div>
+
+
+  
+  <!-- dashboard -->
+  <div class="container-fluid dashboard">
+      <br>
+      <h3>Crear producto</h3>
+      <hr>
+      
+      <p>A continuación puedes crear tu producto arrastrando las imagenes.</p>
+      
+     
+      <article>
+        <div class="col-md-12" id="holder"></div> 
+        <p id="upload" class="hidden"><label>Drag & drop not supported, but you can still upload via this input field:<br>
+          <input type="file"></label></p>
+        <p id="filereader">File API & FileReader API not supported</p>
+        <p id="formdata">XHR2's FormData is not supported</p>
+        <p id="progress">XHR2's upload progress isn't supported</p>
+        <p>Upload progress: <progress id="uploadprogress" max="100" value="0">0</progress></p>
+        
+      </article>
+      
+      
+  </div>
+  
+  
+  
+
+</body>
+<script src="assets/js/jquery-1.11.0.min.js" ></script>
+<script src="assets/js/bootstrap.min.js" ></script>
+<script src="assets/js/owl.carousel.js" ></script>
+<script>
+var holder = document.getElementById('holder'),
+    tests = {
+      filereader: typeof FileReader != 'undefined',
+      dnd: 'draggable' in document.createElement('span'),
+      formdata: !!window.FormData,
+      progress: "upload" in new XMLHttpRequest
+    }, 
+    support = {
+      filereader: document.getElementById('filereader'),
+      formdata: document.getElementById('formdata'),
+      progress: document.getElementById('progress')
+    },
+    acceptedTypes = {
+      'image/png': true,
+      'image/jpeg': true,
+      'image/gif': true
+    },
+    progress = document.getElementById('uploadprogress'),
+    fileupload = document.getElementById('upload');
+
+"filereader formdata progress".split(' ').forEach(function (api) {
+  if (tests[api] === false) {
+    support[api].className = 'fail';
+  } else {
+    support[api].className = 'hidden';
+  }
+});
+
+function previewfile(file) {
+  if (tests.filereader === true && acceptedTypes[file.type] === true) {
+    var reader = new FileReader();
+    reader.onload = function (event) {
+      var image = new Image();
+      image.src = event.target.result;
+      image.width = 250; // a fake resize
+      holder.appendChild(image);
+    };
+
+    reader.readAsDataURL(file);
+  }  else {
+    holder.innerHTML += '<p>Uploaded ' + file.name + ' ' + (file.size ? (file.size/1024|0) + 'K' : '');
+    console.log(file);
+  }
+}
+
+function readfiles(files) {
+    debugger;
+    var formData = tests.formdata ? new FormData() : null;
+    for (var i = 0; i < files.length; i++) {
+      if (tests.formdata) formData.append('file', files[i]);
+      previewfile(files[i]);
+    }
+
+    // now post a new XHR request
+    if (tests.formdata) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '/devnull.php');
+      xhr.onload = function() {
+        progress.value = progress.innerHTML = 100;
+      };
+
+      if (tests.progress) {
+        xhr.upload.onprogress = function (event) {
+          if (event.lengthComputable) {
+            var complete = (event.loaded / event.total * 100 | 0);
+            progress.value = progress.innerHTML = complete;
+          }
+        }
+      }
+
+      xhr.send(formData);
+    }
+}
+
+if (tests.dnd) { 
+  holder.ondragover = function () { this.className = 'hover'; return false; };
+  holder.ondragend = function () { this.className = ''; return false; };
+  holder.ondrop = function (e) {
+    this.className = '';
+    e.preventDefault();
+    readfiles(e.dataTransfer.files);
+  }
+} else {
+  fileupload.className = 'hidden';
+  fileupload.querySelector('input').onchange = function () {
+    readfiles(this.files);
+  };
+}
+
+</script>
+</html>
