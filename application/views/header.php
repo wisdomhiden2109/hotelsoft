@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin Hotel</title>
+  <title>MAKESOFT</title>
   <meta charset="utf-8"> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,17 +17,22 @@
 
 <!-- Navbar -->
 <div class="nav-side-menu">
-    <div class="brand">GUSRESORT</div>
+    <div class="brand">MAKESOFT</div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
         <div class="menu-list">
           <ul id="menu-content" class="menu-content collapse out">
-              <li onclick="location.href='<?php echo base_url(); ?>'">
-                  <i class="fa fa-dashboard fa-lg"></i> Hotel Villa Luz 
+              <li onclick="location.href='<?php echo base_url(); ?>home'">
+                  <i class="fa fa-dashboard fa-lg"></i> Tienda yulua 
               </li>
 
               <li  onclick="location.href='<?php echo base_url(); ?>restaurant-bar.html'">  
                 <i class="material-icons text-center icon-30">shopping_cart</i>
                 <div>Vender </div>
+              </li>
+              
+              <li onclick="location.href='<?php echo base_url(); ?>clients.html'">
+                  <i class="material-icons text-center icon-30">shopping_basket</i>
+                  <div>Ventas</div> 
               </li>
 
               <li onclick="location.href='<?php echo base_url(); ?>clients.html'">
@@ -40,29 +45,10 @@
                 <div>Inventario</div> 
               </li>  
               <ul class="sub-menu collapse" id="inventory">
-                <li onclick="location.href='<?php echo base_url(); ?>categories.html'">Categorias</li>
-                <li onclick="location.href='<?php echo base_url(); ?>subcategories.html'">Subcategorias</li>
                 <li onclick="location.href='<?php echo base_url(); ?>productos'">Productos</li>
+                <li onclick="location.href='<?php echo base_url(); ?>categorias'">Categorias</li>
+                <li onclick="location.href='<?php echo base_url(); ?>subcategorias'">Subcategorias</li>
               </ul>
-
-              <li data-toggle="collapse" data-target="#promotions" class="collapsed">
-                <i class="material-icons text-center icon-30">contact_mail</i>
-              </li>  
-              <ul class="sub-menu collapse" id="promotions">
-                <li>General</li>
-                <li>Temporada</li>
-                <li>Especial</li>
-              </ul>
-
-              <li onclick="location.href='<?php echo base_url(); ?>planes.html'">
-                  <i class="material-icons text-center icon-30">event</i>
-                  <div>Planes</div> 
-              </li>
-
-              <li onclick="location.href='<?php echo base_url(); ?>aditional_services.html'">  
-                <i class="material-icons text-center icon-30">add_to_photos</i>
-                <div>Servicios Adicionales</div>
-              </li>
 
               <li onclick="location.href='<?php echo base_url(); ?>configuracion'">  
                 <i class="material-icons text-center icon-30">settings</i>

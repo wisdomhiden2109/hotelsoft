@@ -55,6 +55,10 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['productos'] = 'products';
 $route['vender'] = 'sales';
+$route['categorias'] = 'categories';
+$route['categorias/crear'] = 'categories/create_categorie';
+$route['subcategorias'] = 'subcategories';
+$route['subcategorias/crear'] = 'subcategories/create_subcategorie';
 $route['productos/nuevo'] = 'products/lv_new_product';
 $route['productos/crear'] = 'products/create_product';
 $route['configuracion'] = 'shoppingconfig';

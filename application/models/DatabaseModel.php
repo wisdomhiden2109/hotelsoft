@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class DatabaseModel extends CI_Model {
 	
 
-	public $connection = NULL;
+	private $connection = NULL;
 
 	public function __construct(){
 		parent::__construct();
@@ -28,8 +28,9 @@ class DatabaseModel extends CI_Model {
 
 	public function autenticate(){
 		
-		$this->connection->select("*");
+		$this->connection->select("usuario.*,almacen.id_tienda");
 		$this->connection->from("usuario");
+		$this->connection->join("almacen","almacen.idalmacen = usuario.id_almacen");
 		$this->connection->where("correo",$this->session->correo);
 		$this->connection->where("clave",$this->session->clave);
 		$result = $this->connection->get();
@@ -40,6 +41,10 @@ class DatabaseModel extends CI_Model {
 			return "error";
 		}
 
+	}
+
+	public function return_connection(){
+		return $this->connection;
 	}
 
 }
